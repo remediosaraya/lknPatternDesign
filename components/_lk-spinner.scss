@@ -1,0 +1,33 @@
+.lk-spinner {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 20px;
+  transform: translate3d(0, 0, 0);
+  animation: spinnerAnimation 700ms infinite linear;
+  border: 2px solid lighten($lk-green-color, 30%);
+  border-radius: 50%;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: -5px;
+    content: ' ';
+    transform: translate(20px, 0);
+    border-radius: 50%;
+    background: $lk-green-color;
+  }
+}
+
+@keyframes spinnerAnimation {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}

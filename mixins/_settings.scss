@@ -1,0 +1,46 @@
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #ce4844;
+$danger-color: #ce4844;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+
+$lk-blue-color: #6DAFC9;
+$lk-green-color: #60c659;
+$lk-border-color: #C1C1C1;
+$lk-light-gray: #e2e0e1;
+$lk-dark-gray: #575757;
+$lk-dark-med-gray: #656565;
+$lk-darker-gray: #949599;
+$lk-almost-white: #F1F1F1;
+
+$lk-light-shadow-gray: #C6C6C6;
+$lk-shadow-gray: #B2B2B2;
+
+//------------from universal styles--------------
+
+$lk-gray-darker: #575757;
+$lk-gray-dark: #656565;
+$lk-gray: #949599;
+$lk-gray-light: #e2e0e1;
+$lk-gray-lighter: #F1F1F1;
+
+$lk-blue: #6dafc7;
+$lk-blue-light: #D2E7EE;
+$lk-blue-dark: #0287C8;
+$lk-green: #60C659;
+$lk-green-dark: #6CA650;
+$lk-green-light: #DFECD7;
+$lk-indigo: #5168AA;
+$lk-red: #ce4844;
+$lk-orange: #f08a24;
+$lk-white: #ffffff;
+
+$brand-primary: $lk-green;
+$brand-secondary: $lk-blue;
+$brand-alert: $lk-red;
+$brand-danger: $brand-alert;
+$brand-success: $lk-green;
+$brand-warning: $lk-orange;
+$brand-info: $lk-blue;

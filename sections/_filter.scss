@@ -1,0 +1,199 @@
+.filters-panel {
+  background: #fff;
+  padding: 20px;
+
+  .tooltip-target {
+    display: inline-block;
+    margin: 7px 0 0 10px;
+  }
+
+  .filter-slider {
+    padding: 25px 0;
+
+    .ui-slider-horizontal {
+      height: 8px;
+      border-radius: 3px;
+      border:none;
+
+      .ui-slider-handle {
+        top: -6px;
+      }
+
+      .ui-slider-range {
+        height: 100%;
+      }
+
+      .ui-slider-handle {
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .ui-widget-header {
+      background: none;
+      background-color: #6CAEC8;
+      border:none;
+      height:2px;
+    }
+
+    .ui-widget-content {
+      background-image: none;
+      background: none;
+      background-color: #7f837e;
+      border:none;
+    }
+  }
+
+  .filter-slider.with-border {
+    border-top: 1px solid $lk-border-color;
+  }
+
+  label {
+    color: #575757 !important;
+  }
+
+  .all-filters {
+    margin: 0;
+    padding: 16px;
+
+    h4 {
+      color:$lk-dark-gray;
+      font-size: 13px;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .filterq {
+    border-top: 1px solid $lk-border-color;
+    margin: 0;
+    padding-bottom: 16px;
+
+    h3 {
+      color:$lk-dark-gray;
+      font-size: 13px;
+      margin: 16px 0 0 16px;
+      padding: 0;
+    }
+
+    p {
+      color:$lk-dark-gray;
+      font-size: 12px;
+      margin: 4px 0 10px 16px;
+      padding: 0;
+    }
+
+    > label {
+      margin-left: 15px;
+    }
+
+    .filter-label{
+      margin-top: 7px;
+    }
+
+    .term-years {
+      label {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { border:none;
+  border-radius: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#apr-range, #mop-range, #mos-range {
+  border:none;
+  margin:10px 5px 10px 5px;
+}
+
+#apr, #mop, #mos {
+  background-color: #595959;
+}
+
+.custom-checkboxes {
+  /* Base for label styling */
+  label {
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-family: 'Lato';
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left:0; top: -1px;
+    width: 17px; height: 17px;
+    border: 1px solid #aaa;
+    background: #fff;
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    font-size: 13px;
+    line-height: 0.8;
+    color: #6DAFC9;
+    transition: all .2s;
+  }
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 1px dotted blue;
+  }
+
+  /* hover style just for information */
+  label:hover:before {
+    border: 1px solid #4778d9!important;
+  }
+} // .custom-checkboxes

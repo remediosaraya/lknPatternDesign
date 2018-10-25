@@ -1,0 +1,21 @@
+.quote-top-label, .cosigner-required {
+  height: 31px;
+  width: 260px;
+  background-color: $lk-blue-color;
+  vertical-align: top;
+  margin-top: -15px;
+  margin-left: 0;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 10px;
+
+  h1 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight:600;
+  }
+}
+
+.can-apply {
+  cursor: pointer;
+}

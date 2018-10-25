@@ -1,0 +1,74 @@
+
+.login__header{
+	width: 100%;
+	height: 100px;
+	display: block;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid solid solid solid;
+	border-color: transparent transparent #cccccc transparent;
+	background-color: #fff;
+	.login__logo{
+		margin:20px;
+		img{
+			max-height: 70px;
+		}
+	}
+}
+.login__bg{
+	background: #efefef;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding:110px 0;
+	font-family:"lato";
+	font-size:16px;
+}
+.login__modal{
+	width: 600px;
+	background: #fff;
+	margin: 0px auto;
+	border-radius: 5px;
+	border: solid 1px #eee;
+	padding: 10px 40px;
+	.modal-header{
+		text-align:center;
+		font-size:18px;
+		color:#5a5a5a;
+		h2{
+			font-size:40px;
+			color:#000;
+		}
+	}
+	.modal-body{
+		.center{
+			text-align:center;
+			p{
+				text-align:center;
+				color:#5a5a5a;
+			}
+			.btn--solid{
+				background:#48cd5e;
+				color:#fff;
+				text-transform:uppercase;
+				padding: 10px 17px;
+			}
+		}
+		.error{
+			font-size:10px;
+		}
+		.control-label{
+			text-align:left;
+			font-weight:normal;
+			margin:0 0 12px 0;
+		}
+		.indication{
+			font-size:11.5px;
+			color:#5a5a5a;
+			text-align:right;
+			line-height:22px;
+		}
+		#confirm_password_input{
+			margin-bottom:35px;
+		}
+	}
+}

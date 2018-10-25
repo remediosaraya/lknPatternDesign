@@ -1,0 +1,45 @@
+// --------------------------------------------------------
+// pending notice
+// --------------------------------------------------------
+
+.lk-interstitial-notice {
+  width: 40%;
+  margin: 90px auto;
+  padding: 50px 50px;
+  border: 1px solid $lk-gray;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba($lk-gray-light, 0.5);
+}
+
+.lk-interstitial-notice__image {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.lk-interstitial-notice__content {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: $lk-gray-darker;
+}
+
+.lk-choice-divider {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $lk-gray-dark;
+}
+
+.lk-supplemental-text {
+    font-size: 0.7em;
+    line-height: (1.5/0.7);
+    display: inline-block;
+    color: $lk-gray-dark;
+}
+
+@media only screen and (max-width: 600px) {
+  .lk-interstitial-notice {
+    width: 85%;
+  }
+}

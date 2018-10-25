@@ -1,0 +1,429 @@
+@import "../mixins/*";
+
+body {
+  color: #585858;
+}
+.wrapper {
+  background-color: $lk-white;
+}
+
+// ------------------------------------
+// -------------Buttons----------------
+// ------------------------------------
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-align: center;
+  transition: all .3s;
+  white-space: inherit;
+
+  &:focus, &.active:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    opacity: .55;
+    background-color: $lk-gray-light;
+    border: none;
+    color: $lk-gray-dark;
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--green {
+    background-color: $lk-green-light;
+    color: $lk-green-dark;
+    &:hover {
+      background-color: $lk-green-dark;
+      color: #ffffff;
+    }
+  }
+  &--blue {
+    background-color: $lk-blue-light;
+    color: $lk-blue;
+    &:hover {
+      background-color: $lk-blue;
+      color: #ffffff;
+    }
+  }
+
+  &--outlined {
+    background-color: #fff;
+    border: 3px solid $lk-green-dark;
+    color: $lk-green-dark;
+    text-transform: uppercase;
+    background-color: $lk-white;
+    &:hover {
+      background-color: $lk-green-dark;
+      color: $lk-white;
+    }
+  }
+
+  &--solid {
+    border-color: $lk-green-dark;
+    background-color: $lk-green-dark;
+    color: $lk-white;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $lk-green-light;
+      color: $lk-green-dark;
+    }
+  }
+}
+
+// offer page custom CSS----------------------
+
+.section {
+  &--dark {
+    background-color: $lk_gray_light;
+  }
+}
+
+.offer {
+  border: 1px solid #bebcbc;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 2px 3px $lk-light-shadow-gray;
+
+  &.disabled {
+    display: none;
+  }
+}
+
+.offers-by-type {
+
+}
+
+.offer-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #bebcbc;
+  padding: 12px 0;
+  position: relative;
+  letter-spacing: 1px;
+
+  &--green {
+    background-color: $lk-green-dark;
+    color: $lk-white;
+  }
+
+  &--blue {
+    background-color: $lk-blue;
+    color: $lk-white;
+  }
+
+  &--gray {
+    background-color: $lk-gray;
+    color: $lk-white;
+  }
+}
+
+.offer-detail {
+  padding: 30px 40px 12px;
+  background-color: #ffffff;
+  @media screen and (max-width:450px) {
+    & {
+      padding: 30px 20px 12px;
+    }
+  }
+  &--inactive {
+    background-color: $lk-gray-lighter;
+  }
+  &--dark {
+    background-color: $lk-gray-light;
+  }
+}
+
+.offer-detail-label {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.offer-detail-rate {
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+.card-column {
+
+  &__header {
+    border-radius: 14px 14px 0 0;
+    padding: 20px 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $lk-border-color;
+    margin-bottom: 25px;
+    position: relative;
+
+    &--active {
+      background-color: $lk-white;
+
+      &:before {
+        border-style: solid;
+        border-width: 9px 9px 0 9px;
+        border-color: $lk-border-color transparent transparent transparent;
+        position: absolute;
+        bottom: -9px;
+        left: 50%;
+        margin-left: -9px;
+        content: "";
+      }
+      &:after {
+        border-style: solid;
+        border-width: 9px 9px 0 9px;
+        border-color: #ffffff transparent transparent transparent;
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        margin-left: -9px;
+        content: "";
+      }
+    }
+
+    &--inactive {
+      background-color: $lk-gray-lighter;
+      color: $lk-gray-dark;
+    }
+  }
+
+  &__tab {
+    display: flex;
+  }
+}
+
+
+.superscript {
+  color: $lk-gray;
+
+  a {
+    text-decoration: underline;
+    color: $lk-gray;
+  }
+
+  & .no-pointer:hover {
+    cursor: auto;
+  }
+}
+
+// .mobile-superscript {
+//   display: none;
+// }
+
+// offer page modal custom CSS----------------------
+
+.modal .modal-content {
+  .modal-header{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #bebcbc;
+    padding: 12px;
+    position: relative;
+    letter-spacing: 1px;
+  }
+
+  .close {
+    margin: -12px;
+    padding: 12px;
+  }
+
+  .offer {
+    margin-bottom: 0;
+  }
+
+  .modal-footer {
+    position: relative;
+    margin-top: -30px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal .modal-content .modal-footer {
+    margin-top: 0;
+    padding: 10px;
+  }
+}
+
+
+/* ====== ASIDE ====== */
+.sidebar {
+  &__box {
+    border: 1px solid #bebcbc;
+    padding: 24px 20px;
+    margin-bottom: 25px;
+  }
+}
+
+.steps {
+  counter-reset: progressSteps;
+  margin: 16px 0 10px;
+  list-style-type: none;
+  padding: 0;
+
+  & li {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 14px;
+    color: $lk-gray-light;
+    font-size: 1.05em;
+
+    &.active,
+    &.completed {
+      color: $lk-green;
+    }
+
+    &:before {
+      content: counter(progressSteps);
+      counter-increment: progressSteps;
+      position: absolute;
+      left: 0;
+      top: -2px;
+      height: 26px;
+      width: 26px;
+      background-color: $lk-gray-light;
+      border-radius: 50%;
+      color: $lk-white;
+      text-align: center;
+      padding-top: 4px;
+      font-size: 0.85em;
+    }
+
+    &.active:before {
+      background-color: $lk-green;
+    }
+
+    &.completed:before {
+      background-color: $lk-green;
+      font-family: 'Glyphicons Halflings';
+      content: "\e013";
+      font-size: 0.7em;
+      padding-top: 5px;
+    }
+    @media screen and (min-width:767px) {
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:991px) {
+
+  .rates-header-desktop {
+    display: none;
+  }
+
+  .card-column {
+    &__header {
+      cursor: pointer;
+    }
+  }
+
+}
+
+@media screen and (min-width:991px) {
+  .rates-header-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width:767px) {
+  .mobile-sidebar {
+    display: none;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .desktop-sidebar {
+    display: none;
+  }
+}
+
+// $star-size: 30px;
+// .star-twelve {
+//     height: $star-size;
+//     width: $star-size;
+//     background: $lk-green;
+//     position: relative;
+//     margin: 0px 0 20px 0px;
+//
+//     -moz-transform: rotate(30deg);
+//     -webkit-transform: rotate(30deg);
+//     -ms-transform: rotate(30deg);
+//     -o-transform: rotate(30deg);
+//     transform: rotate(30deg);
+// }
+// .star-twelve:before {
+//     content: "";
+//     position: absolute;
+//     -moz-transform: rotate(30deg);
+//     -webkit-transform: rotate(30deg);
+//     -ms-transform: rotate(30deg);
+//     -o-transform: rotate(30deg);
+//     transform: rotate(30deg);
+//     height: $star-size;
+//     width: $star-size;
+//     background: $lk-green;
+// }
+// .star-twelve:after {
+//     position: absolute;
+//     -moz-transform: rotate(-30deg);
+//     -webkit-transform: rotate(-30deg);
+//     -ms-transform: rotate(-30deg);
+//     -o-transform: rotate(-30deg);
+//     transform: rotate(-30deg);
+//     height: $star-size;
+//     width: $star-size;
+//     background: $lk-green;
+//
+//     // Checkmark
+//     font-family: 'Glyphicons Halflings';
+//     content: "\e013";
+//     font-size: 20px;
+//     line-height: $star-size;
+//     text-align: center;
+//     color: #ffffff;
+// }
+
+@media screen and (max-width:450px) {
+  // .star-twelve {
+  //   position: absolute;
+  //   top: 10px;
+  // }
+  // .star-twelve, .star-twelve:before, .star-twelve:after {
+  //   height: $star-size / 2;
+  //   width: $star-size / 2;
+  //   font-size: 14px;
+  //   line-height: $star-size / 2;
+  // }
+  .offer-detail {
+    & .u-border-left {
+      border-left: none;
+    }
+  }
+  .offer-detail-rate {
+    font-size: 1.4em;
+  }
+  .offer-detail-label {
+    font-size: 1.0em;
+  }
+}
+
+#network-main-start {
+  font-weight: 400;
+}
+
+#network-confirm {
+  font-weight: 400;
+}

@@ -1,0 +1,29 @@
+section#error {
+  .error-panel {
+    h2 {
+      color: darken($alert-color, 25%);
+    }
+
+    &.error-panel--info {
+      background: lighten($info-color, 15%);
+      border-color: $info-color;
+
+      h2 {
+        color: darken($info-color, 25%);
+      }
+    }
+
+    &.error-panel--warning {
+      background: lighten($warning-color, 25%);
+      border-color: $warning-color;
+
+      h2 {
+        color: darken($warning-color, 25%);
+      }
+    }
+  }
+}
+
+.form-errors-wrapper{
+  margin-top: 15px;
+}

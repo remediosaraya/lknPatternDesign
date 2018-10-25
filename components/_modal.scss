@@ -1,0 +1,97 @@
+.modal{
+
+  //make the bootstrap default for small screens a little wider
+  .modal-sm{
+    width: 400px;
+  }
+
+  .modal-content{
+    text-align: center;
+    border-radius: 0px;
+    position: relative;
+
+    .x{
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      text-transform: uppercase;
+
+      a{
+        display: block;
+        background: #000;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 5px $lk-dark-gray;
+        padding: 0 5px;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+
+    .modal-header{
+      border: 0;
+      padding: 50px 50px 0;
+
+      .modal-title{
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+
+    .modal-body{
+      padding: 50px;
+    }
+
+    .modal-footer{
+      text-align: center;
+      border: 0;
+      padding: 0 50px 50px;
+
+      .btn{
+        background: $lk-green-dark;
+        color: #fff;
+        border: 3px solid $lk-green-dark;
+        border-radius: 0;
+        padding: 5px;
+        min-width: 125px;
+        text-transform: uppercase;
+        margin: 2px;
+      }
+      .btn--outlined {
+        background-color: #fff;
+        border: 3px solid $lk-green-dark;
+        color: $lk-green-dark;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $lk-green-dark;
+          color: $lk-white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal .modal-content {
+    .modal-header {
+      padding: 25px 15px 10px;
+    }
+    .modal-body {
+      padding: 10px;
+      text-align: left;
+    }
+    .modal-footer {
+      padding: 0 10px 50px;
+      .btn {
+        width: 100%;
+      }
+      .btn + .btn {
+        margin-top: 15px;
+      }
+    }
+  }
+}

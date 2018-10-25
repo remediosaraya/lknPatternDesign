@@ -1,0 +1,15 @@
+.form-control:focus {
+  border-color: #60c659; // $lk-green-color;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(96, 198, 89,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(96, 198, 89,.6);
+}
+
+@media (min-width: 768px) {
+  .dl-horizontal dt {
+    width: 120px;
+  }
+  .dl-horizontal dd {
+    margin-left: 140px;
+  }
+}

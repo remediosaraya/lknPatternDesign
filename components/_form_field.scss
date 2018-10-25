@@ -1,0 +1,28 @@
+.form-field {
+  // keep the labels white when `has-error` is applied
+  &.has-error {
+    .control-label {
+      color: #fff;
+    }
+  }
+
+  .field-error-wrapper {
+    &.has-error {
+      color: $danger-color;
+      background:lighten($danger-color, 50%);
+      /* padding: 2px; */
+      padding-bottom: 2px;
+      /*border: 1px solid $danger-color;*/
+      border-radius: 4px;
+
+      .field-error {
+        display: block;
+        border: 1px solid $danger-color;
+        border-radius: 0px 0px 4px 4px;
+        font-size: 0.85em;
+        padding: 2px;
+        color: $danger-color;
+      }
+    }
+  }
+}

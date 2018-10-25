@@ -1,0 +1,218 @@
+.card {
+  .card__title {
+    height: 31px;
+    // width: 260px;
+    background-color: $lk-blue-color;
+    vertical-align: top;
+    margin-top: -15px;
+    margin-left: 0;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 10px;
+    h1 {
+      color: #ffffff;
+      font-size: 16px;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+  }
+
+  .card__body {
+    p {
+      font-size: 16px;
+      color: $lk-dark-gray;
+    }
+
+    img {
+      margin: 20px 0 0 20px;
+      max-height: 100px;
+    }
+
+    .offer-details .monthly-payment,
+    .offer-details .no-payments,
+    .offer-details .total-payment,
+    .offer-details .apr {
+      color: #585858;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 17px 36px;
+      width: 50%;
+      display: table-cell;
+    }
+
+    .offer-details span.themonthlypayment {
+      font-size: 30px;
+    }
+
+    .offer-details .details-label,
+    .no-payments span.in-years {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .offer-details .monthly-payment {
+      text-align: right;
+      border-bottom: 1px solid #dddfdf;
+      border-right:1px solid #dddfdf;
+    }
+
+    .offer-details .no-payments {
+      border-bottom: 1px solid #dddfdf;
+    }
+
+    .offer-details .total-payment {
+      border-right: 1px solid #dddfdf;
+      text-align: right;
+    }
+
+    .features {
+      cursor: pointer;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 6px 12px;
+      letter-spacing: 1px;
+      font-size: 12px;
+      border:none;
+    }
+
+    .row.detail, &.row.detail {
+      color: #585858;
+      margin: 16px 0 23px 0;
+
+      label {
+        white-space: nowrap;
+      }
+
+      .bordered-col {
+        border-left:  1px solid #DDDFDF;
+        border-right: 1px solid #DDDFDF;
+      }
+      .padding-left30{
+        padding-left:23px;
+      }
+
+      .icon-col {
+        text-align: center;
+        padding: 0;
+
+        .lk-icon {
+          // font-size: 35px;
+          margin: 10px;
+          color: #fff;
+        }
+
+        .circle-filled {
+          border-radius: 50%;
+          background: $lk-blue-color;
+          width: 50px;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        div {
+          font-size: 11px;
+          white-space: nowrap;
+        }
+      }
+
+      .month-pmt-col {
+        padding: 0 10px 0 5px;
+        text-align: right;
+
+        .month-pmt {
+          font-size: 30px;
+        }
+      }
+      .value {
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      div.center {
+        margin: auto;
+        display: table;
+      }
+
+      sup a {
+        font-size:11px;
+        color:#585858;
+      }
+      sup a:hover {
+        text-decoration:none;
+      }
+
+      button.apply {
+        right: 10px;
+        bottom: 10px;
+        padding: 6px 12px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        border:none;
+      }
+
+
+      button.apply-small {
+        right: 10px;
+        bottom: 10px;
+        border: none;
+        height: 60px;
+        padding: 0px;
+        font-size: 17px;
+        text-transform: uppercase;
+        width:90px;
+      }
+
+      button.select {
+        text-transform: uppercase;
+        font-weight:600;
+        font-size:14px;
+        color:#fff;
+        background:#cbcbc9;
+        height:60px;
+        letter-spacing:0px;
+      }
+
+      button.apply-activated,
+      .submit-application.apply-activated {
+        color: #ffffff;
+        background-color: $lk-green-color;
+      }
+
+      padding-left30{
+        padding-left:23px;
+      }
+
+      button.lenders-count {
+        margin-top: 20px;
+        background-color: #F1F1F1;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: -33px;
+        right: 2px;
+        min-width:97px;
+        padding-top:2px;
+        padding-bottom:2px;
+      }
+
+      h3.select-lender-heading {
+       font-size: 20px;
+       font-weight: bold;
+     }
+    }
+  }
+
+  // card attributes
+  &.card--padded {
+    .card__body {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+
+  border-radius: 8px;
+  box-shadow: 2px 3px $lk-light-shadow-gray;
+  padding: 15px;
+  position: relative;
+  background: #fff;
+  margin: 29px;
+}

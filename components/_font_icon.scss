@@ -1,0 +1,18 @@
+input.with-white-addon {
+  border-left: 0;
+}
+
+div.input-group-addon.white {
+  background-color: #ffffff;
+  border: 1px solid #CCCCCC;
+  border-right: 0;
+  color: #848282;
+}
+
+.has-error .input-group-addon.white {
+  border: 1px solid #ce4844;
+  border-right:0px;
+}
+.form-field.has-error .form-control{
+  padding-right:0px;
+}

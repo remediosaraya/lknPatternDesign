@@ -1,0 +1,76 @@
+$animation-speed: 1s;
+
+@mixin animate-prefixer($property, $value...) {
+  -webkit-#{$property}: unquote("#{$value}");
+  -moz-#{$property}: unquote("#{$value}");
+  -ms-#{$property}: unquote("#{$value}");
+  -o-#{$property}: unquote("#{$value}");
+  #{$property}: unquote("#{$value}");
+}
+
+// helpers to build out the classes for ng-animate
+@mixin ng-animation($in, $out, $speed) {
+  @include animate-prefixer(animation, $in $speed);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  &.ng-enter, &.ng-add {
+    @include animate-prefixer(animation, $in $speed);
+  }
+  &.ng-leave, &.ng-hide, &.ng-remove {
+    @include animate-prefixer(animation, $out $speed);
+  }
+}
+
+.animate {
+  &.page-transition {
+    @extend .fade;
+  }
+  &.tab-slide {
+    @include ng-animation(fadeInUp, fadeOutUp, $animation-speed);
+  }
+  &.slide {
+    transform-origin: top center;
+    @include ng-animation(slideDown, slideUp, $animation-speed);
+  }
+  &.flip-x {
+    @include ng-animation(flipInX, flipOutX, $animation-speed);
+  }
+  &.flip-y {
+    @include ng-animation(flipInY, flipOutY, $animation-speed);
+  }
+  &.fade {
+    @include ng-animation(fadeIn, fadeOut, $animation-speed);
+    opacity: 1;
+  }
+}
+
+// custom animations
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: scale(1, 0);
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}

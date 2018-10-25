@@ -1,0 +1,315 @@
+// we pre-compile this to /assets/font-awesome from vendor/assets/fonts
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "mixins/*";
+// @import "styles";   < contains defunct styles that are no longer used
+@import "components/*";
+@import "sections/*";
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #F5F5F5;
+}
+
+.lk-blue {
+  color: $lk-blue-color;
+}
+
+a.green {
+  color: $lk-green-color;
+}
+
+.light-text {
+  color: #b0b0b0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color:#ffffff;
+  padding-top: 26px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $lk-border-color;
+}
+
+.header-help {
+  p {
+    margin: 0;
+    padding: 0;
+    text-align:left;
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 17px;
+    color: #656565;
+
+  }
+
+@media only screen and (max-width: 920px) {
+    p{
+      text-align:right;
+    }
+}
+
+  span {
+    color: $lk-green-color;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.square-corners {
+  border-radius: 0;
+}
+
+.softpull-load {
+  width: 100%;
+  height: 9000px;
+  position: absolute;
+  z-index: 99999999;
+  background-color: rgba(255,255,255,0.7);
+  text-align: center;
+
+  img {
+    position: fixed;
+    top: 220px;
+  }
+}
+
+.container-bg {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.container-bg:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: $lk-light-gray;
+  width: 66.66667%;
+  //^^ to match content column width
+}
+
+#main-mask {
+  opacity: 1.0;
+  background: $lk-light-gray;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 500;
+
+  #main-spinner {
+    background: white;
+    padding: 50px 63px;
+    width: 75%;
+    margin: 63px auto;
+    border-radius: 8px;
+    box-shadow: 2px 3px $lk-light-shadow-gray;
+    text-align: center;
+
+    h1{
+      color: #60c659;
+      padding: 10px;
+    }
+
+    h4 + h4 {
+      color: #60c659;
+    }
+  }
+}
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+}
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
+
+.btn-cosigner{
+  background-color: #007A7A;
+  border: #FFFFFF;
+  border-style: solid;
+  color: white;
+  &:hover{
+    color: white;
+  }
+}
+
+.grayout
+{
+  filter:alpha(opacity=50); /* IE */
+  opacity: 0.5; /* Safari, Opera */
+  -moz-opacity:0.50; /* FireFox */
+  z-index: 20;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+#disclaim_footer {
+  background-color: #515151;
+  color: #c4c4c4;
+  font-size: 11px;
+  font-weight: 300;
+  padding-bottom: 43px;
+  padding-top: 58px;
+
+  p {
+    padding:0 25px;
+  }
+}
+
+
+#credit_report_policy{
+  h1 {
+    font-size: 40px;
+    color: #F7941D;
+    line-height: 34px;
+    margin: 15px 0px;
+  }
+
+  h3 {
+    color: #333;
+    font-weight: 200;
+    font-size: 2.4em;
+    margin: 10px 0;
+  }
+
+  h4 {
+    color: #333;
+    font-weight: 200;
+    font-size: 10px;
+    margin: 10px 0;
+    line-height: 14px;
+    padding: 0 0 10px 0;
+    border: none;
+  }
+
+  p {
+    color: #666666;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    letter-spacing: .02em;
+  }
+
+  span.bold {
+    font-weight: bold;
+    color: #111;
+  }
+}
+
+div#bbb_accreditation {
+  background-image: url(/img/bbb.png);
+  height: 44px;
+  width: 164px;
+  max-width: 100%;
+}
+
+// random form stuff
+.input-group.input-group-focus {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 1) !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;
+}
+
+.input-group-focus input:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.input-group-focus .input-group-addon {
+  border-color: $lk-green-color !important;
+}
+
+.has-error .input-group-focus .input-group-addon {
+  border-color: #843534 !important;
+}
+
+.Vspace58{
+  height:58px;
+}
+
+.Vspace15{
+  height:15px;
+}
+
+.col-nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.banner-alert {
+  padding: 20px 35px;
+  background: $lk-light-shadow-gray;
+  font-size: 15px;
+
+  h3,
+  .important{
+    color: $danger-color;
+    font-weight: bold;
+  }
+}
+
+// css trick to get elements to expand to 100% height without using position:absolute. the difference in the 2 numbers is the actual padding-bottom you want
+// currently used on .panel-body and .cosign-container
+// disable the style for bootstrap "small" screen (bc it then makes the content area not to appear)
+@media only all and (min-width: 765px){
+  .extend-to-bottom {
+    margin-bottom: -4980px;
+    padding-bottom: 5000px;
+  }
+
+}
+
+a.heavy-green {
+  font-weight: bold;
+  color: $lk-green-color;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+/* Use this when you wan't to make sure to get user's attention */
+.blinking-text {
+  color: red;
+  font-size: 36px;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
