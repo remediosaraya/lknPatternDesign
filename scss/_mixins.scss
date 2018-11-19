@@ -1,0 +1,25 @@
+// Mixins
+// --------------------------
+
+@mixin lk-icon-icon() {
+  display: inline-block;
+  font: normal normal normal #{$lk-icon-font-size-base}/#{$lk-icon-line-height-base} "LendkeyIcons";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin lk-icon-icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin lk-icon-icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+  -ms-transform: scale($horiz, $vert);
+  transform: scale($horiz, $vert);
+}
